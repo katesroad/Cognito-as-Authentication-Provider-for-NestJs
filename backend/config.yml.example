@@ -1,0 +1,12 @@
+cognito:
+  poolId: aaa
+  region: aaa
+
+app:
+  port: 3000
+
+DB:
+  Mongo: aa
+
+auth:
+  secret: hh
