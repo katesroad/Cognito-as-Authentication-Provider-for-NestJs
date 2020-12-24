@@ -23,6 +23,8 @@
 
 - [Integration with React](https://docs.amplify.aws/start/getting-started/setup/q/integration/react)
 
+- [Version control to Amplify project](https://docs.amplify.aws/cli/reference/files#aws-exportsjs)
+
 
 ## Integrate Cognito with Nest.js 
 
