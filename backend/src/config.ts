@@ -7,8 +7,8 @@ const YAML_CONFIG_FILENAME =
     ? '../config.dev.yml'
     : '../config.prod.yml';
 
-console.log( YAML_CONFIG_FILENAME );
+console.log(YAML_CONFIG_FILENAME);
 
 export default () => {
-  return yaml.load( readFileSync( join( __dirname, YAML_CONFIG_FILENAME ), 'utf8' ) );
+  return yaml.load(readFileSync(join(__dirname, YAML_CONFIG_FILENAME), 'utf8'));
 };

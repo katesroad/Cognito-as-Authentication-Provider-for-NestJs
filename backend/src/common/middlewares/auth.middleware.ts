@@ -8,8 +8,6 @@ import { ConfigService } from '@nestjs/config';
 export class AuthMiddleware implements NestMiddleware {
   constructor(private config: ConfigService) {}
   use(req: Request, res: Response, next: Function) {
-    const domain = this.config.get('domain');
-    console.log(this.config.get('cognito'));
     const {
       aws_cognito_identity_pool_id,
       aws_cognito_region,

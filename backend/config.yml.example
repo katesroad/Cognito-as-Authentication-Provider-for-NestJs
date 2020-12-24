@@ -1,12 +1,7 @@
 cognito:
-  poolId: aaa
-  region: aaa
+  aws_cognito_identity_pool_id: aws_cognito_identity_pool_id
+  aws_cognito_region: us-east-2
+  aws_user_pools_web_client_id: aws_user_pools_web_client_id
 
 app:
-  port: 3000
-
-DB:
-  Mongo: aa
-
-auth:
-  secret: hh
+  port: 5000
