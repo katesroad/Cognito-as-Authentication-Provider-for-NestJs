@@ -1,18 +1,18 @@
+import Amplify from "aws-amplify";
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import Amplify, { Auth } from "aws-amplify";
-import reportWebVitals from "./reportWebVitals";
 import awsconfig from "./aws-exports";
+import reportWebVitals from "./reportWebVitals";
 
 Amplify.configure(awsconfig);
 
 Amplify.configure(awsconfig);
 ReactDOM.render(
-	<React.StrictMode>
-		<App />
-	</React.StrictMode>,
-	document.getElementById("root")
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
