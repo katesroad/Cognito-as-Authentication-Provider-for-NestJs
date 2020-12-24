@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "opencourseclub6bf7eed9": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
