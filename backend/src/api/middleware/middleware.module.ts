@@ -8,6 +8,6 @@ import { MiddlewareController } from './middleware.controller';
 export class MiddlewareModule implements NestModule {
   configure(consumer: MiddlewareConsumer): MiddlewareConsumer | void {
     // Use authentication midddleware
-    consumer.apply(AuthMiddleware).forRoutes('api');
+    consumer.apply(AuthMiddleware).forRoutes('middleware');
   }
 }

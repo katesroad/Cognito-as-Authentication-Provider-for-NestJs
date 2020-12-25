@@ -8,11 +8,10 @@ import { ConfigService } from '@nestjs/config';
 export class AuthMiddleware implements NestMiddleware {
   constructor(private config: ConfigService) {}
   use(req: Request, res: Response, next: Function) {
-    const {
-      aws_cognito_identity_pool_id,
-      aws_cognito_region,
-    } = this.config.get('cognito');
-    const issuer = `https://cognito-idp.${aws_cognito_region}.amazonaws.com/${aws_cognito_identity_pool_id}`;
+    const { aws_user_pools_id, aws_cognito_region } = this.config.get(
+      'cognito',
+    );
+    const issuer = `https://cognito-idp.${aws_cognito_region}.amazonaws.com/${aws_user_pools_id}`;
     const jwksUri = `${issuer}/.well-known/jwks.json`;
     jwt({
       secret: expressJwtSecret({

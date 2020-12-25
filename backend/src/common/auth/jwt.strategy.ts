@@ -8,11 +8,11 @@ import { ConfigService } from '@nestjs/config';
 export class JwtStrategy extends PassportStrategy(Strategy) {
   constructor(config: ConfigService) {
     const {
-      aws_cognito_identity_pool_id,
+      aws_user_pools_id,
       aws_cognito_region,
       aws_user_pools_web_client_id,
     } = config.get('cognito');
-    const issuer = `https://cognito-idp.${aws_cognito_region}.amazonaws.com${aws_cognito_identity_pool_id}`;
+    const issuer = `https://cognito-idp.${aws_cognito_region}.amazonaws.com${aws_user_pools_id}`;
     const jwksUri = `${issuer}/.well-known/jwks.json`;
     super({
       secretOrKeyProvider: passportJwtSecret({
